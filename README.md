@@ -39,6 +39,14 @@ Node is used to build the files. The generated site can be served directly over 
 
 Domain and production deployment configuration are separate from this source repository. The future AMIRA application is reserved for `app.amiraedu.com`.
 
+### Rumahweb with Git
+
+GitHub Actions builds each update to `main` and publishes the generated files under `dist/` on the separate **`hosting` branch**. Clone `hosting` on the hosting account and point the domain to that checkout's `dist/` directory. Follow the [Rumahweb installation and update instructions](docs/HOSTING-BRANCH.md).
+
+This avoids running the Astro compiler on shared hosting. On the developer's Unlimited M account, npm installation succeeded, but the Rust compiler could not create a worker thread (`Resource temporarily unavailable`, OS error 11), including a retry with reduced Tokio, Rayon, and libuv workers. The exact server quota requires hosting resource diagnostics; the prebuilt branch removes that build step from the account.
+
+The workflow commits only the generated website and hosting instructions. It uses ordinary pushes, requires no hosting credentials, and does not deploy to Rumahweb or change DNS. Original PDFs are excluded from the published build. `node scripts/publish-hosting.mjs` verifies the generated files without publishing; `--push` publishes them to `hosting`.
+
 ## Scope and product status
 
 - Responsive landing page, educator/student explanation, classroom history, source-linked recognition, FAQ, and contact.

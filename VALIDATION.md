@@ -70,3 +70,11 @@ Build passed with Node requirements recorded in package metadata and the README.
 - `npm run build` passed. Six viewport widths (320, 390, 640, 768, 1024, 1440 px) showed no overflow, broken logo images, runtime errors, or failed requests.
 - Mobile navigation checks passed. Axe default-view checks with WCAG 2 A/AA and 2.1 A/AA tags found no violations on desktop or mobile.
 - Logo typography was visually checked at 148/180 px. Header, footer, and social-card spacing were inspected. Latest measurements and screenshots are in `output/preview/single-a/`; provenance and the full edit prompt are in `docs/BRAND.md`.
+
+## Prebuilt Git hosting workflow — 13 October 2026
+
+- Local `npm run build` passed; the publisher verified 35 static files and their HTML/CSS resource destinations.
+- An isolated local bare Git repository exercised first publication, an unchanged build, and an updated build. The update preserved the earlier hosting commit as its parent; the unchanged build created no commit.
+- Verified that the hosting branch contains only `README.md` and `dist/`, records the source commit, excludes original PDFs and Finder metadata, and leaves the source branch and temporary worktree registry clean. An unexpected PDF was rejected before publication.
+- Workflow YAML parsed successfully. Official checkout/setup-node actions are pinned to verified commit hashes. Main-branch triggers and the manual-run guard restrict source builds to `main`; publication is serialized and uses ordinary pushes.
+- These checks verify packaging and repository publication behavior. The hosting account's process/thread quota was not directly inspected. No production hosting or DNS changes were performed.
