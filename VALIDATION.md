@@ -62,3 +62,11 @@ Build passed after clarifying that innovation sharing began in 2025. The generat
 ## Source repository preparation — 13 October 2026
 
 Build passed with Node requirements recorded in package metadata and the README. Dependency, build, environment, and local archive folders are ignored. Original PDFs are preserved locally outside `public/` and excluded from the commit and generated build; optional document links are omitted when those files are unavailable. The current build has 20 links with valid internal targets or file destinations. Asset/brand documentation and selected previews are included in portable repository paths.
+
+## Single-A logo correction — 13 October 2026
+
+- The primary logo was edited with built-in ImageGen so the stylized A followed by mira reads Amira once. Original PNG: 2172 × 724 px with transparent alpha; website derivative: 1700 × 468 px.
+- The shared header/footer logo, social card, current brand proof, palette comparison, repository screenshots, and hosting package use the corrected wordmark. The standalone A symbol and favicons remain suitable.
+- `npm run build` passed. Six viewport widths (320, 390, 640, 768, 1024, 1440 px) showed no overflow, broken logo images, runtime errors, or failed requests.
+- Mobile navigation checks passed. Axe default-view checks with WCAG 2 A/AA and 2.1 A/AA tags found no violations on desktop or mobile.
+- Logo typography was visually checked at 148/180 px. Header, footer, and social-card spacing were inspected. Latest measurements and screenshots are in `output/preview/single-a/`; provenance and the full edit prompt are in `docs/BRAND.md`.

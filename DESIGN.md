@@ -57,3 +57,7 @@ Three directions were compared in `output/exploration/palettes.html` and `palett
 The page now uses restrained warm neutrals, a yellow teacher note, charcoal CTAs, olive supporting details, and a charcoal learning section with a light conversation surface. Purple/blue pastel panels and differently colored selected teaching approaches were consolidated into semantic tokens. Yellow is used for fill and decorative emphasis; selected tab/stage indicators and focus rings use dark ink on light surfaces.
 
 Earlier CSS, the mentor component, page metadata, social card, and screenshots are preserved in `output/archive/palette-v1/`. The current palette leaves all English content and product-status distinctions intact. The work remains limited to the landing page.
+
+## Single-A wordmark correction — 13 October 2026
+
+The primary lockup now reads A+mira as one five-letter name. The cobalt A serves as the first letter; the duplicated navy a is removed. The corrected ImageGen artwork is used in the shared header/footer component, social preview, brand proof, and palette comparison. The A-only icon remains appropriate for favicons and mentor avatars. Earlier A+amira artwork is preserved in the local archive, while the current reusable PNG is `amira-logo-primary-v3.png`.

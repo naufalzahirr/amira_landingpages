@@ -18,8 +18,8 @@ function loadPlaywright() {
 const { chromium } = loadPlaywright();
 const projectRoot = path.resolve(__dirname, '..');
 const outputPath = path.join(projectRoot, 'public/og.png');
-const archivePath = path.join(projectRoot, 'output/archive/palette-v1/og-before.png');
-const logoPath = path.join(projectRoot, 'public/assets/brand/amira-logo-primary-v2.png');
+const archivePath = path.join(projectRoot, 'output/archive/single-a-logo/public/og.png');
+const logoPath = path.join(projectRoot, 'public/assets/brand/amira-logo-primary-v3.png');
 const mascotPath = path.join(projectRoot, 'public/assets/amira-mascot.png');
 const fontPath = path.join(projectRoot, 'public/assets/nunito-latin.woff2');
 
