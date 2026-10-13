@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import mascot from '../assets/amira-mascot.png';
+---
+<div class="hero-product" aria-label="Illustration of teacher guidance and student learning with AMIRA">
+  <span class="hero-blob" aria-hidden="true"></span>
+  <span class="doodle doodle-star" aria-hidden="true">✳</span>
+  <span class="hero-book" aria-hidden="true"><Icon name="book" size={32} /></span>
+  <div class="mascot-greeting">Hi, I'm AMIRA! <span aria-hidden="true">✦</span></div>
+  <Image class="hero-mascot" src={mascot} alt="AMIRA's mascot welcomes learners with a smile and a golden hijab" width={600} widths={[280, 400, 630]} sizes="(max-width: 640px) 245px, 315px" format="webp" quality={88} loading="eager" fetchpriority="high" />
+  <div class="teacher-note"><div><span class="note-icon"><Icon name="sliders" size={18} /></span> TEACHER SETS THE DIRECTION</div><p>“Offer a small hint.<br />Let students try it themselves.”</p><span class="teacher-note-tag">Sample mentor instruction</span></div>
+  <div class="hero-chat-card">
+    <div class="hero-chat-top"><span class="mini-avatar"><span class="brand-mark"></span></span><strong>Learn with AMIRA</strong><span class="preview-label">Illustration</span></div>
+    <div class="hero-student-question">“Why isn't my CSS loading?”</div>
+    <div class="hero-chat-answer"><span aria-hidden="true">↳</span><p>Let's check one thing first. Which folder is your CSS file in?</p></div>
+    <div class="hero-learning-trail"><span><Icon name="check" size={13} /> Understand</span><span><Icon name="check" size={13} /> Try</span><span><Icon name="check" size={13} /> Explain</span></div>
+  </div>
+
+</div>

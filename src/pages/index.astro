@@ -1,0 +1,188 @@
+---
+import Icon from '../components/Icon.astro';
+import HeroExperience from '../components/HeroExperience.astro';
+import MentorShowcase from '../components/MentorShowcase.astro';
+import BrandLogo from '../components/BrandLogo.astro';
+import { Image } from 'astro:assets';
+import learningStudio from '../assets/amira-learning-studio.png';
+import mascot from '../assets/amira-mascot.png';
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import '../styles/global.css';
+
+const description = 'AMIRA is an AI learning companion guided by educators. Explore teacher-defined instructions, learning materials, and step-by-step support for students.';
+const title = 'AMIRA — AI learning companion guided by educators';
+const socialTitle = 'More curiosity. More understanding. — AMIRA';
+const awardSource = 'https://dinaspendidikan.kepriprov.go.id/berita/kepri/syabas-naufal-zahir-rizqullah-dari-smkn-4-tanjungpinang-raih-terbaik-1-guru-smk-transformatif-tingkat-nasional';
+const innovationSource = 'https://dinaspendidikan.kepriprov.go.id/berita/disdik/disdik-kepri-dorong-budaya-inovasi-menuju-iga-2026';
+const hasManuscript = existsSync(resolve(process.cwd(), 'public/references/naskah-amira-2025.pdf'));
+const hasPresentation = existsSync(resolve(process.cwd(), 'public/references/presentasi-amira-2025.pdf'));
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6ef" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href="https://amiraedu.com/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="AMIRA" />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://amiraedu.com/" />
+    <meta property="og:image" content="https://amiraedu.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AMIRA — More curiosity. More understanding. An AI learning companion guided by educators." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://amiraedu.com/og.png" />
+    <meta name="twitter:image:alt" content="AMIRA — More curiosity. More understanding. An AI learning companion guided by educators." />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'AMIRA', alternateName: 'Artificial Mentor for Intelligent Reasoning and Assistance', url: 'https://amiraedu.com', description, inLanguage: 'en' })} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="#" aria-label="AMIRA — home"><BrandLogo /></a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><Icon name="menu" /></button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="#about">About AMIRA</a><a href="#how-it-works">How it works</a><a href="#journey">Our journey</a>
+          <a href="#contact" class="nav-contact">Let’s connect <Icon name="diagonal" size={16} /></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="tiny-orbit"></span> AI LEARNING, GUIDED BY EDUCATORS</div>
+          <h1 id="hero-title">More curiosity.<br />More <span class="highlight-word">understanding.</span></h1>
+          <p class="hero-product-definition">An AI mentor, shaped by your teaching.</p>
+          <p class="hero-description">Educators set the instructions and learning context. AMIRA is designed to help students ask questions, try the next step, and build their own understanding.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#mentor">Explore a mentor example <Icon /></a><a class="text-link" href="#contact">Talk to us <Icon name="diagonal" size={17} /></a></div>
+          <div class="hero-footnote"><span class="footnote-faces" aria-hidden="true"><span><Icon name="sliders" size={15} /></span><span><Icon name="chat" size={15} /></span><span><Icon name="bulb" size={15} /></span></span><p>Educators guide. Learners explore.<br /><strong>AI learning companion guided by educators.</strong></p></div>
+        </div>
+        <HeroExperience />
+      </section>
+      <div class="intro-strip container"><span>ROOM FOR EVERY NEXT STEP</span><div><span><Icon name="sliders" size={17} /> Educator guidance</span><span><Icon name="book" size={17} /> Learning context</span><span><Icon name="bulb" size={17} /> Independent thinking</span></div></div>
+
+      <section id="about" class="introduction section-pad">
+        <div class="container introduction-layout">
+          <div class="introduction-copy">
+            <div class="eyebrow">INTRODUCING AMIRA</div><h2>Guided by educators.<br /><span class="muted-heading">Discovered by learners.</span></h2>
+            <p class="introduction-lead">A classroom has many starting points. AMIRA brings teacher-defined guidance into AI conversations, giving students room to ask, experiment, and reflect.</p>
+            <div class="audience-row"><span class="audience-icon teacher"><Icon name="sliders" size={21} /></span><div><h3>Teachers shape the guidance</h3><p>Set the instructions, teaching approach, and materials that reflect your learning goals.</p></div></div>
+            <div class="audience-row"><span class="audience-icon student"><Icon name="bulb" size={21} /></span><div><h3>Students work through the next step</h3><p>Ask questions, test a hint, and explain what they have understood.</p></div></div>
+            <a class="text-link" href="#how-it-works">See the learning flow <Icon size={17} /></a>
+          </div>
+          <figure class="learning-scene"><span class="scene-backdrop" aria-hidden="true"></span><Image src={learningStudio} alt="Illustration of an educator guiding two teenage learners at a shared desk, with AMIRA as a learning companion" width={1100} widths={[550, 800, 1100]} sizes="(max-width: 640px) 90vw, (max-width: 900px) 50vw, 600px" format="webp" quality={85} loading="lazy" /><figcaption><span class="scene-dot" aria-hidden="true"></span> An illustration of AMIRA’s learning approach</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="how-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><div class="eyebrow">HOW AMIRA WORKS</div><h2>Your teaching approach.<br />A student’s next step.</h2></div><p>Teachers provide the context.<br />AMIRA supports the conversation.<br />Students do the thinking.</p></div>
+          <div class="steps">
+            <article class="step"><div class="step-top"><span>01</span><Icon name="sliders" size={27} /></div><h3>Set the learning direction</h3><p>Define what the mentor should help with, how it should communicate, and when to offer a hint.</p></article>
+            <article class="step"><div class="step-top"><span>02</span><Icon name="book" size={27} /></div><h3>Add meaningful context</h3><p>Bring in subject-specific materials so the conversation stays connected to the learning goal.</p></article>
+            <article class="step"><div class="step-top"><span>03</span><Icon name="chat" size={27} /></div><h3>Support the learning process</h3><p>Students ask, try, and reflect. Teachers continue the coaching and check understanding.</p></article>
+          </div>
+          <p class="section-note">This flow presents AMIRA’s approach. Separate mentor profiles and class access are part of the product direction.</p>
+        </div>
+      </section>
+
+      <section id="mentor" class="configure-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><div class="eyebrow">CONFIGURE YOUR AI MENTOR</div><h2>Your teaching.<br /><span class="muted-heading">AMIRA’s guidance.</span></h2></div><p>Compare how different instructions<br />shape the support a learner receives.<br /><a class="inline-link" href="#product-status">Explore the product’s progress <Icon size={14} /></a></p></div>
+          <MentorShowcase />
+          <p class="section-note">Interactive concept preview with prepared examples. <a href="#product-status">See what is documented and what is planned.</a></p>
+        </div>
+      </section>
+
+      <section id="learning" class="learning-section section-pad">
+        <div class="container learning-layout">
+          <div class="learning-copy">
+            <div class="eyebrow">LEARNING WITH AMIRA</div><h2>“Oh, now<br /><span class="gold-text">I get it!”</span></h2>
+            <p>A small question can open a new way of thinking. Choose a topic and follow a conversation that invites the learner to try.</p>
+            <div class="scenario-picker" role="group" aria-label="Choose a conversation example"><button class="is-active" data-scenario="web" aria-pressed="true">Debugging code</button><button data-scenario="math" aria-pressed="false">Exploring concepts</button><button data-scenario="language" aria-pressed="false">Developing ideas</button></div>
+            <div class="learning-principle"><span data-principle-title>01 — UNDERSTAND THE CONTEXT</span><p data-principle>AMIRA invites learners to review what they have tried, then take one manageable next step.</p></div>
+          </div>
+          <div class="conversation-window">
+            <div class="conversation-header"><div class="mentor-avatar"><span class="brand-mark" aria-hidden="true"></span></div><div><strong>Learning with AMIRA</strong><span>Illustrative conversation</span></div><Icon name="chat" size={20} /></div>
+            <div class="conversation-progress" aria-label="Conversation stages"><span class="is-current" data-learning-phase="0" aria-current="step">1. Understand</span><span data-learning-phase="1">2. Try</span><span data-learning-phase="2">3. Reflect</span></div>
+            <div class="conversation-body" aria-live="polite" aria-atomic="false" data-conversation></div>
+            <div class="conversation-controls"><button class="conversation-reset" aria-label="Replay conversation example"><Icon name="replay" size={17} /></button><button class="button button-gold" data-next-message>Continue example <Icon size={17} /></button></div>
+            <div class="conversation-disclaimer">Prepared examples that demonstrate AMIRA’s approach.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-amira" class="why-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><div class="eyebrow">WHY AMIRA</div><h2>Build understanding.<br /><span class="muted-heading">Grow independence.</span></h2></div><p>Technology supports the next step.<br />Educators guide the learning.</p></div>
+          <div class="principles">
+            <article><span class="principle-icon"><Icon name="bulb" size={27} /></span><h3>Confidence to try</h3><p>Step-by-step hints give learners space to test ideas and work through a challenge.</p></article>
+            <article><span class="principle-icon"><Icon name="book" size={27} /></span><h3>Context that matters</h3><p>Instructions and materials connect the conversation to the subject and learning goal.</p></article>
+            <article><span class="principle-icon"><Icon name="sliders" size={27} /></span><h3>Teachers stay involved</h3><p>Educators guide the pedagogy, coach learners, and assess their understanding.</p></article>
+            <article><span class="principle-icon"><Icon name="shield" size={27} /></span><h3>Honest learning habits</h3><p>Early classroom practice encouraged students to acknowledge AI assistance and explain their own work.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="journey-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><div class="eyebrow">OUR JOURNEY</div><h2>Built in a classroom.<br /><span class="muted-heading">Growing through practice.</span></h2></div><p>Developed by Naufal Zahir Rizqullah<br />at SMKN 4 Tanjungpinang,<br />a vocational secondary school in Indonesia.</p></div>
+          <div class="journey-layout">
+            <figure class="journey-photo"><img src="/assets/amira-classroom.jpg" alt="AMIRA introduction session at SMKN 4 Tanjungpinang, Indonesia" width="1200" height="675" loading="lazy" /><figcaption><span>CLASSROOM DOCUMENTATION</span><span>Tanjungpinang, Indonesia · 2025</span></figcaption></figure>
+            <div class="timeline">
+              <article><span class="timeline-year">THE START</span><h3>Listening to the classroom</h3><p>Different starting points and recurring programming questions sparked AMIRA’s development.</p></article>
+              <article><span class="timeline-year">2025</span><h3>Developing through teaching</h3><p>An earlier version of AMIRA was used in web programming lessons, alongside gradual hints, student reflection, and teacher coaching.</p></article>
+              <article><span class="timeline-year">SINCE 2025</span><h3>Sharing the innovation</h3><p>AMIRA has been shared with educators since 2025. In 2026, it was presented at the Riau Islands Education Office’s school innovation forum.</p><a class="timeline-source" href={innovationSource} target="_blank" rel="noopener">Read the 2026 coverage <Icon name="diagonal" size={13} /></a></article>
+            </div>
+          </div>
+          <div class="recognition-block" aria-labelledby="recognition-title">
+            <div><span class="recognition-label">NATIONAL TEACHING RECOGNITION · 2025</span><h3 id="recognition-title">An educator’s experience.<br />A product’s foundation.</h3></div>
+            <div><p>AMIRA’s developer, <strong>Naufal Zahir Rizqullah</strong>, received first place nationally in the <strong>Transformative Vocational Teacher</strong> category at Indonesia’s 2025 Apresiasi GTK awards.</p><a href={awardSource} target="_blank" rel="noopener">Read the Riau Islands Education Office report <Icon name="diagonal" size={15} /></a><span class="source-language">Original coverage in Indonesian</span></div>
+          </div>
+          <div class="classroom-story"><span class="story-label"><Icon name="book" size={20} /> FROM A SOFTWARE DEVELOPMENT CLASSROOM</span><h3>Learning to code, one small experiment at a time.</h3><div class="story-columns"><p><strong>The challenge</strong>Learners arrived with different levels of experience. Recurring technical questions divided the teacher’s attention.</p><p><strong>The approach</strong>Students tried AMIRA’s hints, noted where AI helped, and discussed the reasoning behind their changes with the teacher.</p><p><strong>The classroom practice</strong>The 2025 manuscript documents gradual guidance, reflection, and coaching as part of the learning process.</p></div><span class="story-source">Based on the 2025 AMIRA classroom-practice manuscript from SMKN 4 Tanjungpinang.</span></div>
+          <details id="product-status" class="product-status">
+            <summary><span><span class="status-dot"></span> Rebuilding AMIRA</span><span>Original work &amp; next steps <Icon name="chevron" size={18} /></span></summary>
+            <div class="status-content">
+              <div><h3>Documented in 2025</h3><p>Web/Android chat, a system-prompt editor, subject management, and PDF resources. Prompt Preset and Learning Log are described in the classroom manuscript.</p></div>
+              <div><h3>The next AMIRA</h3><p>We are rebuilding AMIRA from its earlier classroom app. The next product concept focuses on separate teacher-configured mentors, their instructions and materials, and class access.</p></div>
+              <div><h3>Original references</h3><a href="/assets/amira-product-2025.jpg" target="_blank" rel="noopener">View the 2025 app interface <Icon name="diagonal" size={14} /></a>{hasManuscript && <a href="/references/naskah-amira-2025.pdf" target="_blank" rel="noopener">Read the classroom manuscript <Icon name="diagonal" size={14} /></a>}{hasPresentation && <a href="/references/presentasi-amira-2025.pdf" target="_blank" rel="noopener">View the development presentation <Icon name="diagonal" size={14} /></a>}<p>{hasManuscript || hasPresentation ? 'Indonesian-language references documenting AMIRA’s early development in 2025.' : 'The interface documents AMIRA’s early classroom development in 2025.'}</p></div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="faq-section container">
+        <div><div class="eyebrow">A FEW THINGS TO KNOW</div><h2>A little more<br />about AMIRA.</h2></div>
+        <div class="faq-list">
+          <details><summary>Who is AMIRA for?<Icon name="chevron" size={18} /></summary><p>AMIRA is being developed for educators and students. Its early classroom practice began in software and game development lessons at an Indonesian vocational secondary school, with broader learning contexts as the product direction.</p></details>
+          <details><summary>What does the teacher control?<Icon name="chevron" size={18} /></summary><p>Teacher-defined instructions and materials shape how AMIRA supports a learner. Educators continue to guide reflection, check understanding, and make teaching and assessment decisions.</p></details>
+          <details><summary>Can I try a live demo?<Icon name="chevron" size={18} /></summary><p>AMIRA’s earlier app was used in classroom practice, and the platform is now being rebuilt. This website provides prepared interactive examples. Public access to the new app will be announced when it is ready; contact us to discuss the rebuild or a potential school pilot.</p></details>
+          <details><summary>Can AI responses be wrong?<Icon name="chevron" size={18} /></summary><p>Yes. Students should test suggestions and compare them with their learning materials. Teachers remain involved in reviewing understanding and decisions.</p></details>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section container">
+        <div class="contact-panel"><div class="contact-copy"><div class="eyebrow">LET’S EXPLORE WHAT COMES NEXT</div><h2>Your classroom.<br />Our next conversation.</h2><p>For educators, schools, and collaborators interested in AMIRA<br class="desktop-break" /> and the possibilities of educator-guided AI learning.</p><a class="button button-gold" href="mailto:admin@amiraedu.com?subject=AMIRA%20collaboration">Discuss a school pilot <Icon name="diagonal" size={18} /></a><span class="contact-email">admin@amiraedu.com</span></div><div class="mascot-stage"><span class="mascot-halo"></span><Image src={mascot} alt="AMIRA, a friendly robot learning companion in a golden hijab, extending a welcoming hand" width={600} widths={[300, 600]} sizes="(max-width: 640px) 285px, 335px" format="webp" quality={88} loading="lazy" /><span class="mascot-caption">Start with a question.<br />Discover the next step.</span></div></div>
+      </section>
+    </main>
+    <footer class="container site-footer">
+      <div class="footer-main"><a class="wordmark" href="#" aria-label="AMIRA — back to top"><BrandLogo footer /></a><p>Artificial Mentor for Intelligent<br />Reasoning and Assistance</p><div><a href="#about">About</a><a href="#product-status">Development</a><a href="#contact">Contact</a></div></div>
+      <div class="footer-bottom"><span>© {new Date().getFullYear()} AMIRA. Built with care for learning.</span><span>AI learning companion guided by educators.</span></div>
+    </footer>
+    <script src="../scripts/interactions.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/amira-logo.png';
+
+const { footer = false } = Astro.props;
+const sizes = footer
+  ? '(max-width: 640px) 144px, 160px'
+  : '(max-width: 640px) 148px, 180px';
+---
+<Image
+  class="brand-logo"
+  src={logo}
+  alt="AMIRA"
+  width={540}
+  widths={[296, 320, 360, 540]}
+  sizes={sizes}
+  format="webp"
+  quality={95}
+  loading={footer ? 'lazy' : 'eager'}
+  decoding="async"
+/>
