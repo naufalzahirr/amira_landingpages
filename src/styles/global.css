@@ -120,3 +120,10 @@ button,select,input{font:inherit}button,a{-webkit-tap-highlight-color:transparen
 .contact-panel{background:var(--gold);border-color:#d5aa43}
 .contact-copy h2,.contact-copy p,.contact-copy .eyebrow,.contact-email,.mascot-caption{color:var(--ink)}
 .mascot-halo{background:var(--warm-soft)}
+
+/* Make the first learning context and development stage visible in the hero. */
+.hero-development{max-width:460px;margin-top:18px;font-size:12px;line-height:1.85;color:var(--muted)}
+.hero-development strong{font-weight:750;color:var(--accent-ink)}
+.hero-development a{display:inline-flex;align-items:center;gap:5px;margin-left:5px;color:var(--accent-ink);font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.hero-development a:hover{color:var(--ink)}
+.hero-development+.hero-footnote{margin-top:20px}

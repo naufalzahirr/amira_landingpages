@@ -4,6 +4,8 @@ The English-language product landing page for **amiraedu.com**, built with Astro
 
 AMIRA — Artificial Mentor for Intelligent Reasoning and Assistance — is an AI learning companion guided by educators. Teachers shape the instructions and learning context; students work through questions, hints, and reflection.
 
+The initial focus is teachers and students in secondary and vocational education. The hero makes the new platform's development stage visible and links to the earlier classroom work and next steps.
+
 ![AMIRA landing page](docs/preview/desktop.png)
 
 ## Requirements and local development

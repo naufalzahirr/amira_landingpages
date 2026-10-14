@@ -78,3 +78,12 @@ Build passed with Node requirements recorded in package metadata and the README.
 - Verified that the hosting branch contains only `README.md` and `dist/`, records the source commit, excludes original PDFs and Finder metadata, and leaves the source branch and temporary worktree registry clean. An unexpected PDF was rejected before publication.
 - Workflow YAML parsed successfully. Official checkout/setup-node actions are pinned to verified commit hashes. Main-branch triggers and the manual-run guard restrict source builds to `main`; publication is serialized and uses ordinary pushes.
 - These checks verify packaging and repository publication behavior. The hosting account's process/thread quota was not directly inspected. No production hosting or DNS changes were performed.
+
+## Product positioning and visible development stage — 14 October 2026
+
+- The hero, FAQ, and search/social descriptions identify the initial secondary/vocational learning context. The introduction explains how recurring questions and different starting points divide teacher attention.
+- A development-stage line is visible beneath the hero actions. Its “See our progress” link opens the existing product-status details and preserves the distinction between the earlier app and the current rebuild.
+- Static build and the hosting-output verifier passed. At 320, 390, 640, 768, 1024, and 1440 px, the development line stayed within the initial viewport, with no horizontal overflow, failed images, or JavaScript/request errors.
+- The new progress link opened its target at all six widths. Mobile navigation passed. Automated Axe checks found no WCAG 2 A/AA or 2.1 A/AA violations in the default desktop/mobile views.
+- Desktop/mobile hero and introduction layouts were visually inspected. Current QA screenshots and report are in `output/preview/startup-copy/`; repository previews show the revised hero.
+- A separate English Claude application draft was prepared in ignored local output for founder review. It identifies proposed integration work as unimplemented and is excluded from the public website and Git publication.
